@@ -37,9 +37,18 @@ public class Account_file {
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "ERROR: " + e);
             return null;
-        }
-        
+        }    
     }
     
-    
+    public void writeFile(String nameArchive, String data){
+        try{
+            FileWriter archive = new FileWriter(nameArchive);
+            BufferedWriter information = new BufferedWriter(archive);
+            information.write(data);
+            information.close();
+            archive.close();
+        }catch(IOException e){
+            JOptionPane.showMessageDialog(null, "ERROR: " + e);
+        }
+    }
 }
