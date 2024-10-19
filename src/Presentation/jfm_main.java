@@ -1,5 +1,8 @@
-
 package Presentation;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author justin
@@ -11,6 +14,15 @@ public class jfm_main extends javax.swing.JFrame {
      */
     public jfm_main() {
         initComponents();
+        //super("Centrar JFrame");
+
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        System.out.println(height + width);
+        setSize(width , height);
+        //setLocationRelativeTo(null);
+        //this.setExtendedState(this.MAXIMIZED_BOTH);
         System.out.println("Hola Mundo");
     }
 
@@ -23,17 +35,29 @@ public class jfm_main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Bank Account Manager");
+        setPreferredSize(new java.awt.Dimension(876, 467));
+
+        jLabel1.setText("Hola Mundo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(757, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(664, 664, 664))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(401, 401, 401)
+                .addComponent(jLabel1)
+                .addContainerGap(1080, Short.MAX_VALUE))
         );
 
         pack();
@@ -75,5 +99,6 @@ public class jfm_main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
