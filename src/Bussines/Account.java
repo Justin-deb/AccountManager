@@ -1,6 +1,7 @@
 
 package Bussines;
 
+import Data.Account_file;
 import java.util.ArrayList;
 
 /**
@@ -61,11 +62,13 @@ public class Account {
     }
     
     public void saveFile(String information){
-
+        Account_file af = new Account_file();
+        af.writeFile("users.txt", information);
     }
     
     public ArrayList<Account> readFile(){
-        return null;
+        Account_file af = new Account_file();
+        return af.read();
     }
     
 }
