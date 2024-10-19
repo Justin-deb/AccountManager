@@ -15,6 +15,7 @@ public class jfm_main extends javax.swing.JFrame {
      */
     public jfm_main() {
         initComponents();
+        System.out.println("Hola Mundo");
     }
 
     /**
