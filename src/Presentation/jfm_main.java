@@ -47,17 +47,17 @@ public class jfm_main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(757, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(256, 256, 256)
                 .addComponent(jLabel1)
-                .addGap(664, 664, 664))
+                .addContainerGap(280, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(401, 401, 401)
+                .addGap(165, 165, 165)
                 .addComponent(jLabel1)
-                .addContainerGap(1080, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         pack();
