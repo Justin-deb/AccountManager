@@ -6,6 +6,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import Bussines.Center;
+
 /**
  *
  * @author justin
@@ -15,13 +17,15 @@ public class jfm_main extends javax.swing.JFrame {
     /**
      * Creates new form jfm_main
      */
-
+    Center center;
     public jfm_main() {
         initComponents();
-
+        
+        //testing
+        /*
         setExtendedState(6);
         
-        jPanel1.setLayout(new GridBagLayout());
+        jPanel3.setLayout(new GridBagLayout());
         
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
@@ -32,12 +36,13 @@ public class jfm_main extends javax.swing.JFrame {
         JLabel label = new JLabel("Contenido Centrado", SwingConstants.CENTER);
         gbc.gridx = 0; // Columna 0
         gbc.gridy = 0; // Fila 0
-        jPanel1.add(label, gbc);
+        jPanel3.add(label, gbc);
         
+        center = new Center();
         
-        
+        center.CenterPanel(jPanel3);
+        */
     }
-    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,26 +53,12 @@ public class jfm_main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bank Account Manager");
         setPreferredSize(new java.awt.Dimension(876, 467));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 612, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
-
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -110,6 +101,5 @@ public class jfm_main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
