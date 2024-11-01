@@ -28,7 +28,7 @@ public class Account_file {
             while ((line = read.readLine()) != null) {
                 chain = line;
                 separedChain = chain.split("/");
-                account = new Account(separedChain[0], Integer.parseInt(separedChain[1]), separedChain[2], Double.parseDouble(separedChain[3]));
+                account = new Account(separedChain[0],separedChain[1], Integer.parseInt(separedChain[2]), separedChain[3], Double.parseDouble(separedChain[4]));
                 listUser.add(account);
             }
             archive.close();

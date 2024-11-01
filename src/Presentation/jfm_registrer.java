@@ -1,49 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package Presentation;
-
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-
-import Bussines.Center;
 
 /**
  *
  * @author justin
  */
-public class jfm_main extends javax.swing.JFrame {
+public class jfm_registrer extends javax.swing.JFrame {
 
     /**
-     * Creates new form jfm_main
+     * Creates new form jfm_registrer
      */
-    Center center;
-    public jfm_main() {
+    public jfm_registrer() {
         initComponents();
-        
-        //testing
-        /*
-        setExtendedState(6);
-        
-        jPanel3.setLayout(new GridBagLayout());
-        
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.weightx = 1.0; // Permitir que el panel crezca horizontalmente
-        gbc.weighty = 1.0; // Permitir que el panel crezca verticalmente
-        
-        // Añadir un JLabel centrado
-        JLabel label = new JLabel("Contenido Centrado", SwingConstants.CENTER);
-        gbc.gridx = 0; // Columna 0
-        gbc.gridy = 0; // Fila 0
-        jPanel3.add(label, gbc);
-        
-        center = new Center();
-        
-        center.CenterPanel(jPanel3);
-        */
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,8 +27,19 @@ public class jfm_main extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Bank Account Manager");
-        setPreferredSize(new java.awt.Dimension(876, 467));
+        setTitle("Create your account!");
+        setResizable(false);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -78,24 +62,20 @@ public class jfm_main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfm_main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfm_registrer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfm_main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfm_registrer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfm_main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfm_registrer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfm_main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfm_registrer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
-                new jfm_main().setVisible(true);
-                
+                new jfm_registrer().setVisible(true);
             }
         });
     }

@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 public class Account {
     private String name;
+    private String userName;
     private int ID;
     private String password;
     private double balance;
@@ -17,8 +18,9 @@ public class Account {
     public Account() {
     }
 
-    public Account(String name, int ID, String password, double balance) {
+    public Account(String name,String userName, int ID, String password, double balance) {
         this.name = name;
+        this.userName = userName;
         this.ID = ID;
         this.password = password;
         this.balance = balance;
@@ -56,10 +58,19 @@ public class Account {
         this.balance = balance;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
-        return "Account{" + "name=" + name + ", ID=" + ID + ", password=" + password + ", balance=" + balance + '}';
+        return "Account{" + "name=" + name + ", userName=" + userName + ", ID=" + ID + ", password=" + password + ", balance=" + balance + '}';
     }
+
     
     public void saveFile(String information){
         Account_file af = new Account_file();
