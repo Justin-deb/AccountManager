@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 public class Account {
     private String name;
+    private String lastname;
     private String userName;
     private int ID;
     private String password;
@@ -18,8 +19,9 @@ public class Account {
     public Account() {
     }
 
-    public Account(String name,String userName, int ID, String password, double balance) {
+    public Account(String name,String lastName,String userName, int ID, String password, double balance) {
         this.name = name;
+        this.lastname = lastName;
         this.userName = userName;
         this.ID = ID;
         this.password = password;
@@ -66,9 +68,17 @@ public class Account {
         this.userName = userName;
     }
 
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     @Override
     public String toString() {
-        return "Account{" + "name=" + name + ", userName=" + userName + ", ID=" + ID + ", password=" + password + ", balance=" + balance + '}';
+        return "Account{" + "name=" + name + ", lastname=" + lastname + ", userName=" + userName + ", ID=" + ID + ", password=" + password + ", balance=" + balance + '}';
     }
 
     

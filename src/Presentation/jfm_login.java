@@ -45,7 +45,7 @@ public class jfm_login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txt_user = new javax.swing.JTextField();
         txt_password = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        btn_login = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         lbl_user = new javax.swing.JLabel();
         lbl_password = new javax.swing.JLabel();
@@ -99,13 +99,13 @@ public class jfm_login extends javax.swing.JFrame {
 
         txt_password.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PASSWORD:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Fira Code", 1, 15), new java.awt.Color(0, 102, 102))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_login.setBackground(new java.awt.Color(0, 102, 102));
+        btn_login.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
+        btn_login.setForeground(new java.awt.Color(255, 255, 255));
+        btn_login.setText("Login");
+        btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_loginActionPerformed(evt);
             }
         });
 
@@ -145,7 +145,7 @@ public class jfm_login extends javax.swing.JFrame {
                                     .addComponent(txt_password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(pnl_leftLayout.createSequentialGroup()
                                         .addGap(86, 86, 86)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(96, 96, 96))
                                     .addComponent(lbl_password, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGap(56, 56, 56))))
@@ -164,7 +164,7 @@ public class jfm_login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(jLabel2)
                 .addContainerGap(52, Short.MAX_VALUE))
@@ -189,10 +189,13 @@ public class jfm_login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        System.out.println("Click!!");
+        jfm_registrer r = new jfm_registrer();
+        r.setLogin(this);
+        r.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         lbl_user.setVisible(false);
         lbl_password.setVisible(false);
         if(txt_user.getText().equals("") && txt_password.getText().equals("")){
@@ -227,7 +230,7 @@ public class jfm_login extends javax.swing.JFrame {
                 }
             }
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,7 +268,7 @@ public class jfm_login extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lbl_password;
